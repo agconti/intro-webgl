@@ -6,20 +6,31 @@
   </head>
   <body>
     <script id="vertex-shader" type="text/vertex-shader">
-   /**
-    * Multiply each vertex by the model-view matrix
-    * and the projection matrix (both provided by
-    * Three.js) to get a final vertex position
-    */
+    /**
+     * Multiply each vertex by the model-view matrix
+     * and the projection matrix (both provided by
+     * Three.js) to get a final vertex position
+     */
     void main() {
-      gl_Position = projectionMatrix *
-                    modelViewMatrix *
-                    vec4(position,1.0);
+      gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
     }
+    </script>
+    <script id="fragment-shader" type="text/fragment-shader">
+    /**
+     * Set the colour to a lovely pink.
+     * Note that the color is a 4D Float
+     * Vector, R,G,B and A and each part
+     * runs from 0.0 to 1.0
+     */
+    void main() {
+      gl_FragColor = vec4(1.0, 0.0, 1.0, 1.0);
+    }
+
     </script>
     <script src="../jspm_packages/system.js" charset="utf-8"></script>
     <script src="../config.js" charset="utf-8"></script>
     <script charset="utf-8">
+    System.import("three").then(function(three){ THREE = three })
     System.import("./main")
     </script>
   </body>
