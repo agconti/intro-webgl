@@ -35,6 +35,7 @@ jspm_packages
 
 # Systemjs Files
 !config.js
+
 # built files
 **/*.js
 **/*.js.map
