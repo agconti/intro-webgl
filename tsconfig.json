@@ -11,24 +11,14 @@
   },
   "filesGlob": [
     "./**/*.ts",
-    "!./node_modules/**/*.ts",
-    "!./jspm_modules/**/*.ts"
+    "!./jspm_packages/**/*.ts",
+    "!./node_modules/**/*.ts"
   ],
   "exclude": [
     "node_modules"
   ],
   "files": [
-    "./jspm_packages/npm/typescript@1.8.10/lib/lib.core.d.ts",
-    "./jspm_packages/npm/typescript@1.8.10/lib/lib.core.es6.d.ts",
-    "./jspm_packages/npm/typescript@1.8.10/lib/lib.core.es7.d.ts",
-    "./jspm_packages/npm/typescript@1.8.10/lib/lib.d.ts",
-    "./jspm_packages/npm/typescript@1.8.10/lib/lib.dom.d.ts",
-    "./jspm_packages/npm/typescript@1.8.10/lib/lib.es6.d.ts",
-    "./jspm_packages/npm/typescript@1.8.10/lib/lib.es7.d.ts",
-    "./jspm_packages/npm/typescript@1.8.10/lib/lib.scriptHost.d.ts",
-    "./jspm_packages/npm/typescript@1.8.10/lib/lib.webworker.d.ts",
-    "./jspm_packages/npm/typescript@1.8.10/lib/typescript.d.ts",
-    "./jspm_packages/npm/typescript@1.8.10/lib/typescriptServices.d.ts",
+    "./bonjourno_world/main.ts",
     "./main.ts"
   ],
   "atom": {
