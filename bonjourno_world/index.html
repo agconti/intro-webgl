@@ -5,6 +5,18 @@
     <title>Bonjourno World</title>
   </head>
   <body>
+    <script id="vertex-shader" type="text/vertex-shader">
+   /**
+    * Multiply each vertex by the model-view matrix
+    * and the projection matrix (both provided by
+    * Three.js) to get a final vertex position
+    */
+    void main() {
+      gl_Position = projectionMatrix *
+                    modelViewMatrix *
+                    vec4(position,1.0);
+    }
+    </script>
     <script src="../jspm_packages/system.js" charset="utf-8"></script>
     <script src="../config.js" charset="utf-8"></script>
     <script charset="utf-8">
