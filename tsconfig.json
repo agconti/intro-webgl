@@ -19,6 +19,7 @@
   ],
   "files": [
     "./bonjourno_world/main.ts",
+    "./bonjourno_world/unlitMaterial.ts",
     "./main.ts"
   ],
   "atom": {
