@@ -5,7 +5,7 @@ Following the HTML5 Rocks [tutorial](http://www.html5rocks.com/en/tutorials/webg
 - [Node.js](https://nodejs.org/en/) — `brew install node`
 - [jspm](http://jspm.io/docs/getting-started.html) — `npm install -g jspm`
 
-# Quick start:
+## Quick start:
 
 Install dependencies:
 
