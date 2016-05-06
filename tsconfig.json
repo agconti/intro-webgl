@@ -18,6 +18,8 @@
     "node_modules"
   ],
   "files": [
+    "./fakeLightFragmentShader.ts",
+    "./fakeLitMaterial.ts",
     "./main.ts",
     "./simpleVertexShader.ts",
     "./solidColorPinkFragmentShader.ts",

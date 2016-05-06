@@ -1,16 +1,31 @@
 import * as THREE from 'three'
 import {unlitMaterial} from './unlitMaterial'
+import {fakeLitMaterial} from './fakeLitMaterial'
 
 const scene = new THREE.Scene()
 const renderer = new THREE.WebGLRenderer()
 const cameraRatio = window.innerWidth / window.innerHeight
 const camera = new THREE.PerspectiveCamera(75, cameraRatio, 1, 10000)
 
-const geometry = new THREE.BoxGeometry(200, 200, 200)
-const mesh = new THREE.Mesh(geometry, unlitMaterial)
+const boxDimension = 100
+const geometry = new THREE.BoxGeometry(boxDimension, boxDimension, boxDimension)
+const sceneObjects = [
+  , new THREE.Mesh(geometry, unlitMaterial)
+  , new THREE.Mesh(geometry, fakeLitMaterial)
+]
+const initalSceneObjectOffset = 50
+const centeredContentOffset = Math.floor(sceneObjects.length / 2) * boxDimension * -1
 
+sceneObjects.reduce((offset, mesh) => {
+  mesh.position.set(offset, 100, 100)
+  scene.add(mesh)
 
-scene.add(mesh)
+  offset += boxDimension + initalSceneObjectOffset
+  console.log(mesh.position)
+  return offset
+
+}, centeredContentOffset)
+
 renderer.setSize(window.innerWidth, window.innerHeight)
 camera.position.z = 1000
 document.body.appendChild(renderer.domElement)
