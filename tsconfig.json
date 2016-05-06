@@ -19,6 +19,8 @@
   ],
   "files": [
     "./main.ts",
+    "./simpleVertexShader.ts",
+    "./solidColorPinkFragmentShader.ts",
     "./unlitMaterial.ts"
   ],
   "atom": {
