@@ -1,5 +1,5 @@
 # Intro Webgl
-Following the HTML5 Rocks [tutorial]() for webgl shaders.
+Following the HTML5 Rocks [tutorial](http://www.html5rocks.com/en/tutorials/webgl/shaders/) for webgl shaders.
 
 ## Dependencies
 - [Node.js](https://nodejs.org/en/) — `brew install node`

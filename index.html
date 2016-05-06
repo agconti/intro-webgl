@@ -2,17 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Bonjourno World</title>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="./bonjourno_world/index.html">Bonjourno World</a></li>
-      </ul>
-    </nav>
-    <script src="./jspm_packages/system.js" charset="utf-8"></script>
-    <script src="./config.js" charset="utf-8"></script>
+    <script src="../jspm_packages/system.js" charset="utf-8"></script>
+    <script src="../config.js" charset="utf-8"></script>
     <script charset="utf-8">
+    System.import("three").then(function(three){ THREE = three })
     System.import("./main")
     </script>
   </body>
