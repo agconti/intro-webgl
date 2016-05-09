@@ -7,26 +7,28 @@ const renderer = new THREE.WebGLRenderer()
 const cameraRatio = window.innerWidth / window.innerHeight
 const camera = new THREE.PerspectiveCamera(75, cameraRatio, 1, 10000)
 
-const boxDimension = 100
-const geometry = new THREE.BoxGeometry(boxDimension, boxDimension, boxDimension)
+const sphereRadius:number = 100
+const sphereDiameter:number = sphereRadius * 2
+const numSegments:number = 32
+const geometry = new THREE.SphereGeometry(sphereRadius, numSegments, numSegments)
 const sceneObjects = [
   , new THREE.Mesh(geometry, unlitMaterial)
   , new THREE.Mesh(geometry, fakeLitMaterial)
 ]
-const initalSceneObjectOffset = 50
-const centeredContentOffset = Math.floor(sceneObjects.length / 2) * boxDimension * -1
+const sceneObjectOffset = 50
+const centeredContentOffset = Math.floor(sceneObjects.length / 2) * sphereDiameter * -1
 
 sceneObjects.reduce((offset, mesh) => {
   mesh.position.set(offset, 100, 100)
   scene.add(mesh)
 
-  offset += boxDimension + initalSceneObjectOffset
-  console.log(mesh.position)
+  offset += sphereDiameter + sceneObjectOffset
+  console.log(mesh)
   return offset
 
 }, centeredContentOffset)
 
 renderer.setSize(window.innerWidth, window.innerHeight)
-camera.position.z = 1000
+camera.position.z = 500
 document.body.appendChild(renderer.domElement)
 renderer.render(scene, camera)

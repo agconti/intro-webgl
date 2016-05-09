@@ -1,6 +1,5 @@
 export const fragmentShader =
 `
-// same name and type as VS
 varying vec3 vNormal;
 
 /**
@@ -10,17 +9,11 @@ varying vec3 vNormal;
  * runs from 0.0 to 1.0
  */
 void main() {
-  // calc the dot product and clamp
-  // 0 -> 1 rather than -1 -> 1
-  vec3 light = vec3(0.5,0.2,1.0);
+  vec3 color = vec3(0.0, 0.0, 1.0);
+  vec3 lightSource = vec3(0.5, 0.2, 1.0);
+  lightSource = normalize(lightSource);
+  float exposureToLight = max(0.0, dot(vNormal, lightSource));
 
-  // ensure it's normalized
-  light = normalize(light);
-
-  // calculate the dot product of
-  // the light to the vertex normal
-  float dProd = max(0.0, dot(vNormal, light));
-
-  gl_FragColor = vec4(1.0, 0.0, 1.0, 1.0);
+  gl_FragColor = vec4(color * exposureToLight, 1.0);
 }
 `
