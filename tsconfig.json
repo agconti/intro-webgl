@@ -21,6 +21,8 @@
     "./fakeLightFragmentShader.ts",
     "./fakeLitMaterial.ts",
     "./main.ts",
+    "./morphingFakeLitMaterial.ts",
+    "./morphingVertextShader.ts",
     "./simpleVertexShader.ts",
     "./solidColorPinkFragmentShader.ts",
     "./unlitMaterial.ts"
